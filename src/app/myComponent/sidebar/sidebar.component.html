@@ -1,0 +1,12 @@
+<div class="">
+    <div class="my-2 font-bold">Trending Subjects</div>
+    <input type="text" class="bg-slate-200 outline-none px-2 py-1 rounded" (keydown)="searchSubject($event)" [formControl]="searchControl" placeholder="search Subject">
+    <div *ngIf="searchStatus === 'searching'">searching.....</div>
+    <div *ngFor="let subject of subjects">
+        <app-subject (handleSearchBook)="searchBook($event)" [subjectName]="subject"></app-subject>
+    </div>
+    <div *ngIf="subjects.length==0">
+        No Data Found
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+<div class="border-b-2 py-2 px-2 border-b-slate-400">
+    <div>
+        <input type="search" class="bg-slate-200 outline-none px-2 py-1 rounded" placeholder="Search Book By Titles Or By Author" (keydown)="searchedBook($event)" [formControl]="bookController">
+    </div>
+    <div class="text-xl py-1 font-extrabold" *ngIf="heading">
+        {{heading}}
+    </div>
+</div>

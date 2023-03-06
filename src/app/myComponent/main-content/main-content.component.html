@@ -1,0 +1,7 @@
+<div class="p-2">
+    <div *ngIf="searchStatus === 'searching'">Searching.....</div>
+    <div *ngIf="!(books.length===0)">
+        <app-table (prev)="prev()" [pageNo]="pageNo" [maxPageNo]="maxPageNo" (next)="next()" [books]="books"></app-table>
+    </div>
+    <div *ngIf="searchStatus==='success' && books.length===0">Nothing To Show</div>
+</div>

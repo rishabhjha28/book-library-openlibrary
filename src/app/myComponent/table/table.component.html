@@ -1,0 +1,17 @@
+<table  class="table mt-10">
+    <tr class="border-2 border-slate-400">
+        <th class="p-2 border-r-2 border-r-slate-400 cursor-pointer"(click)="sortBy('title')">Title And Sub Title</th>
+        <th class="p-2 border-r-2 border-r-slate-400 cursor-pointer"(click)="sortBy('author')">Author</th>
+        <th class="p-2 border-r-slate-400 border-r-2 cursor-pointer"(click)="sortBy('latestPublishYear')">Latest Publish Year</th>
+        <th class="p-2 cursor-pointer"(click)="sortBy('firstPublishYear')">First Publish Year</th>
+    </tr>
+    <tr class="border border-slate-400" *ngFor="let book of localBooks">
+        <td class="px-2 border-r-2 border-r-slate-400 py-1 ">{{book.title}}</td>
+        <td class="px-2 border-r-2 border-r-slate-400 py-1 ">{{book.author}}</td>
+        <td class="px-2 border-r-2 border-r-slate-400 py-1 ">{{book.latestPublishYear}}</td>
+        <td class="px-2 py-1 ">{{book.firstPublishYear}}</td>
+    </tr>
+</table>
+<div class="flex justify-end mt-5">
+    <app-pagination [pageNo]="pageNo" [maxPageNo]="maxPageNo" (prevPage)="prevPage()" (nextPage)="nextPage()"></app-pagination>
+</div>

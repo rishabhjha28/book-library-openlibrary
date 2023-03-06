@@ -63,7 +63,8 @@
               "browserTarget": "book-library:build:production"
             },
             "development": {
-              "browserTarget": "book-library:build:development"
+              "browserTarget": "book-library:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
